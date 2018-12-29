@@ -1,47 +1,40 @@
 <template>
-  <c-main index>
+  <c-main>
     <global-events
-      @keyup.right="nextSlide"
+      @keyup.left="previousSlide"
     />
 
-    <c-title index>
+    <c-title slot="header">
       {{ title }}
     </c-title>
-
-    <c-subtitle index>
-      Server side rendering made easy
-    </c-subtitle>
   </c-main>
 </template>
 
 <script>
 import CMain from '@/components/c-main'
-import CSubtitle from '@/components/c-subtitle'
 import CTitle from '@/components/c-title'
 
 export default {
   head () {
     return {
-      titleTemplate: '%s',
       title: this.title
     }
   },
 
   components: {
     CMain,
-    CSubtitle,
     CTitle
   },
 
   data () {
     return {
-      title: 'Introduction to Nuxt.js'
+      title: 'Resources'
     }
   },
 
   methods: {
-    nextSlide () {
-      this.$router.push('/toc')
+    previousSlide () {
+      this.$router.push('/deployment')
     }
   }
 }

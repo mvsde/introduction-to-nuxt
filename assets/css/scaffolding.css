@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 5vmin;
+  line-height: 1.4;
+  color: #000;
+}
+
+pre, code {
+  font-family: 'Source Code Pro', monospace;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: #42b883;
+}
+
+a:focus {
+  outline: 0.1em solid rgba(66, 184, 131, 0.5);
+  outline-offset: 0.1em;
+}

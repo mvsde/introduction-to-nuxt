@@ -11,7 +11,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:400,700' }
     ]
   },
 
@@ -19,7 +20,13 @@ module.exports = {
     color: '#35495e'
   },
 
-  css: [],
+  css: [
+    '@/assets/css/scaffolding.css'
+  ],
+
+  plugins: [
+    '@/plugins/global'
+  ],
 
   build: {
     extend (config, ctx) {
