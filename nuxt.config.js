@@ -3,6 +3,10 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
+  generate: {
+    fallback: true
+  },
+
   head: {
     titleTemplate: '%s | Introduction to Nuxt.js',
     meta: [
