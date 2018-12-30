@@ -1,9 +1,5 @@
 <template>
   <c-main>
-    <global-events
-      @keyup.left="previousSlide"
-    />
-
     <c-title slot="header">
       {{ title }}
     </c-title>
@@ -13,6 +9,8 @@
 <script>
 import CMain from '@/components/c-main'
 import CTitle from '@/components/c-title'
+
+import EventBus from '@/event-bus'
 
 export default {
   head () {
@@ -32,10 +30,12 @@ export default {
     }
   },
 
-  methods: {
-    previousSlide () {
-      this.$router.push('/deployment')
-    }
+  created () {
+    EventBus.$on('previousSlide', () => this.$router.push('/deployment'))
+  },
+
+  destroyed () {
+    EventBus.$off('previousSlide')
   }
 }
 </script>
