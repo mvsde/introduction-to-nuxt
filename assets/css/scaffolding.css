@@ -25,7 +25,12 @@ a {
   color: #42b883;
 }
 
-a:focus {
-  outline: 0.1em solid rgba(66, 184, 131, 0.5);
+button {
+  cursor: pointer;
+}
+
+a:focus,
+button:focus {
+  outline: 0.1em solid rgba(53, 73, 94, 0.5);
   outline-offset: 0.1em;
 }

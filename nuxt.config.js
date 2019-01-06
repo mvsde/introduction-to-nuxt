@@ -25,7 +25,8 @@ module.exports = {
   },
 
   css: [
-    '@/assets/css/scaffolding.css'
+    '@/assets/css/scaffolding.css',
+    '@/assets/css/transitions.css'
   ],
 
   plugins: [

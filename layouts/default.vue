@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'autohide': autohideEnabled }">
+  <div :style="{ 'cursor': autohideEnabled ? 'none' : undefined }">
     <global-events
       @keyup.left="previousSlide"
       @keyup.right="nextSlide"
@@ -8,13 +8,23 @@
     />
 
     <nuxt />
+
+    <transition name="fade">
+      <c-nav v-show="!autohideEnabled" />
+    </transition>
   </div>
 </template>
 
 <script>
+import CNav from '@/components/c-nav'
+
 import EventBus from '@/event-bus'
 
 export default {
+  components: {
+    CNav
+  },
+
   data () {
     return {
       autohideEnabled: true,
@@ -47,9 +57,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.autohide {
-  cursor: none;
-}
-</style>
