@@ -10,7 +10,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 5vmin;
   line-height: 1.4;
-  color: #000;
+  color: rgb(var(--color-text));
 }
 
 pre, code {
@@ -18,19 +18,24 @@ pre, code {
 }
 
 p {
-  margin: 0 0 1em;
+  margin: 0 0 var(--vertical-space);
 }
 
 a {
-  color: #42b883;
+  color: rgb(var(--color-light));
+  text-decoration: none;
 }
 
 button {
   cursor: pointer;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 a:focus,
 button:focus {
-  outline: 0.1em solid rgba(53, 73, 94, 0.5);
+  outline: 0.1em solid rgba(var(--color-dark), 0.5);
   outline-offset: 0.1em;
 }

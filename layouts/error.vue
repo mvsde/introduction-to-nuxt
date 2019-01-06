@@ -4,20 +4,22 @@
       {{ title }}
     </c-title>
 
-    <p>This slide could not be found. Maybe start at the beginning?</p>
+    <div>
+      <p>This slide could not be found. Maybe start at the beginning?</p>
 
-    <c-list>
-      <c-list-item>
-        <nuxt-link to="/">
-          Introduction to Nuxt.js
-        </nuxt-link>
-      </c-list-item>
-      <c-list-item>
-        <nuxt-link to="/toc">
-          Table of Contents
-        </nuxt-link>
-      </c-list-item>
-    </c-list>
+      <c-list>
+        <c-list-item>
+          <nuxt-link to="/">
+            Introduction to Nuxt.js
+          </nuxt-link>
+        </c-list-item>
+        <c-list-item>
+          <nuxt-link to="/toc">
+            Table of Contents
+          </nuxt-link>
+        </c-list-item>
+      </c-list>
+    </div>
   </c-main>
 </template>
 

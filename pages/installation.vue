@@ -31,7 +31,7 @@ export default {
   },
 
   created () {
-    EventBus.$on('previousSlide', () => this.$router.push('/what-is-nuxt'))
+    EventBus.$on('previousSlide', () => this.$router.push('/what-is-nuxt/schema'))
     EventBus.$on('nextSlide', () => this.$router.push('/folder-structure'))
   },
 

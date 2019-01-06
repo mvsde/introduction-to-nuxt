@@ -4,10 +4,7 @@
       v-for="entry in entries"
       :key="entry.link"
     >
-      <nuxt-link
-        class="link"
-        :to="entry.link"
-      >
+      <nuxt-link :to="entry.link">
         {{ entry.title }}
       </nuxt-link>
     </c-list-item>
@@ -32,13 +29,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.link {
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-</style>

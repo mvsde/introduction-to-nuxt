@@ -16,7 +16,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:400,700' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:400,400i,700' }
     ]
   },
 
@@ -25,6 +25,7 @@ module.exports = {
   },
 
   css: [
+    '@/assets/css/variables.css',
     '@/assets/css/scaffolding.css',
     '@/assets/css/transitions.css'
   ],

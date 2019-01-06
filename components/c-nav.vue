@@ -45,8 +45,8 @@ export default {
 .nav {
   display: flex;
   position: absolute;
-  left: 2vmin;
-  bottom: 2vmin;
+  left: calc(var(--frame-width) * 2);
+  bottom: calc(var(--frame-width) * 2);
 }
 
 .button {
@@ -61,7 +61,7 @@ export default {
   text-decoration: none;
   color: #fff;
 
-  background: #35495e;
+  background: rgb(var(--color-dark));
   border: 0;
 
   opacity: 0.7;

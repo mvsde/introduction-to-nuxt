@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 .list {
-  margin: 0 0 1em;
+  margin: 0 0 var(--vertical-space);
   padding-left: 1em;
 }
 </style>

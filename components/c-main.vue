@@ -27,27 +27,35 @@ export default {
 
 <style scoped>
 .main {
+  display: grid;
+  grid-template-rows: min-content 1fr;
   min-height: 100vh;
   padding: 4vmin 5vmin;
 
-  border: 1.2vmin solid #42b883;
+  border: var(--frame-width) solid rgb(var(--color-light));
+}
+
+.main > :first-child {
+  margin-top: 0;
+}
+
+.main > :last-child {
+  margin-bottom: 0;
 }
 
 .main--index {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  grid-template-rows: repeat(2, min-content);
+  align-content: center;
 
   color: #fff;
 
-  background: #42b883;
+  background: rgb(var(--color-light));
 }
 
 .header {
-  padding-bottom: 4vmin;
   margin-bottom: 8vmin;
+  padding-bottom: 4vmin;
 
-  border-bottom: 0.4vmin solid rgba(53, 73, 94, 0.2);
+  border-bottom: 0.4vmin solid rgba(var(--color-dark), 0.2);
 }
 </style>

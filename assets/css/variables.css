@@ -1,0 +1,8 @@
+:root {
+  --frame-width: 1.2vmin;
+  --vertical-space: 1em;
+
+  --color-text: 0, 0, 0;
+  --color-light: 66, 184, 131;
+  --color-dark: 53, 73, 94;
+}
