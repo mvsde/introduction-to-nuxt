@@ -13,10 +13,12 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
+    "prismjs": "^1.15.0",
     "vue-global-events": "^1.0.3"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "babel-plugin-prismjs": "^1.0.2",
     "eslint": "^5.0.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-loader": "^2.0.0",

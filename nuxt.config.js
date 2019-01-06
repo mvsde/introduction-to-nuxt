@@ -35,6 +35,18 @@ module.exports = {
   ],
 
   build: {
+    babel: {
+      presets: [
+        '@nuxt/babel-preset-app'
+      ],
+      plugins: [
+        ['prismjs', {
+          languages: ['bash', 'javascript'],
+          theme: 'coy',
+          css: true
+        }]
+      ]
+    },
     extend (config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

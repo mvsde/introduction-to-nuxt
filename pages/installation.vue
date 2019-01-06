@@ -3,14 +3,26 @@
     <c-title slot="header">
       {{ title }}
     </c-title>
+
+    <c-code
+      :code="installationCode"
+      language="bash"
+    />
   </c-main>
 </template>
 
 <script>
+import CCode from '@/components/c-code'
 import CMain from '@/components/c-main'
 import CTitle from '@/components/c-title'
 
 import EventBus from '@/event-bus'
+
+const installationCode = `# With npx
+npx create-nuxt-app project-name
+
+# With Yarn
+yarn create nuxt-app project-name`
 
 export default {
   head () {
@@ -20,6 +32,7 @@ export default {
   },
 
   components: {
+    CCode,
     CMain,
     CTitle
   },
@@ -27,6 +40,12 @@ export default {
   data () {
     return {
       title: 'Installation'
+    }
+  },
+
+  computed: {
+    installationCode () {
+      return installationCode
     }
   },
 

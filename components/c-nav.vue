@@ -63,6 +63,7 @@ export default {
 
   background: rgb(var(--color-dark));
   border: 0;
+  border-radius: 0.1em;
 
   opacity: 0.7;
 
