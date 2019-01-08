@@ -27,6 +27,7 @@ module.exports = {
   css: [
     '@/assets/css/variables.css',
     '@/assets/css/scaffolding.css',
+    '@/assets/css/typography.css',
     '@/assets/css/transitions.css'
   ],
 

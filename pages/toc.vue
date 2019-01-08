@@ -1,17 +1,24 @@
 <template>
   <c-main>
-    <c-title slot="header">
+    <h1 slot="header">
       {{ title }}
-    </c-title>
+    </h1>
 
-    <c-toc :entries="entries" />
+    <ol>
+      <li
+        v-for="entry in entries"
+        :key="entry.link"
+      >
+        <nuxt-link :to="entry.link">
+          {{ entry.title }}
+        </nuxt-link>
+      </li>
+    </ol>
   </c-main>
 </template>
 
 <script>
 import CMain from '@/components/c-main'
-import CTitle from '@/components/c-title'
-import CToc from '@/components/c-toc'
 
 import EventBus from '@/event-bus'
 
@@ -23,9 +30,7 @@ export default {
   },
 
   components: {
-    CMain,
-    CTitle,
-    CToc
+    CMain
   },
 
   data () {
@@ -65,7 +70,7 @@ export default {
   },
 
   created () {
-    EventBus.$on('previousSlide', () => this.$router.push('/'))
+    EventBus.$on('previousSlide', () => this.$router.push('/server-side-rendering'))
     EventBus.$on('nextSlide', () => this.$router.push('/what-is-nuxt'))
   },
 

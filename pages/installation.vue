@@ -1,8 +1,8 @@
 <template>
   <c-main>
-    <c-title slot="header">
+    <h1 slot="header">
       {{ title }}
-    </c-title>
+    </h1>
 
     <c-code
       :code="installationCode"
@@ -14,7 +14,6 @@
 <script>
 import CCode from '@/components/c-code'
 import CMain from '@/components/c-main'
-import CTitle from '@/components/c-title'
 
 import EventBus from '@/event-bus'
 
@@ -33,8 +32,7 @@ export default {
 
   components: {
     CCode,
-    CMain,
-    CTitle
+    CMain
   },
 
   data () {

@@ -1,20 +1,15 @@
 <template>
-  <c-main index>
-    <c-title index>
+  <main class="main">
+    <h1 class="title">
       {{ title }}
-    </c-title>
-
-    <c-subtitle index>
+    </h1>
+    <p class="subtitle">
       Server side rendering made easy
-    </c-subtitle>
-  </c-main>
+    </p>
+  </main>
 </template>
 
 <script>
-import CMain from '@/components/c-main'
-import CSubtitle from '@/components/c-subtitle'
-import CTitle from '@/components/c-title'
-
 import EventBus from '@/event-bus'
 
 export default {
@@ -25,12 +20,6 @@ export default {
     }
   },
 
-  components: {
-    CMain,
-    CSubtitle,
-    CTitle
-  },
-
   data () {
     return {
       title: 'Introduction to Nuxt.js'
@@ -38,7 +27,7 @@ export default {
   },
 
   created () {
-    EventBus.$on('nextSlide', () => this.$router.push('/toc'))
+    EventBus.$on('nextSlide', () => this.$router.push('/server-side-rendering'))
   },
 
   destroyed () {
@@ -46,3 +35,26 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+  color: #fff;
+
+  background: rgb(var(--color-light));
+}
+
+.title {
+  font-size: 12vmin;
+}
+
+.subtitle {
+  margin: 0.5em 0 0;
+  font-size: 6vmin;
+}
+</style>

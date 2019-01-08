@@ -1,23 +1,18 @@
 <template>
   <c-main>
-    <c-title slot="header">
+    <h1 slot="header">
       {{ title }}
-    </c-title>
+    </h1>
 
-    <c-list>
-      <c-list-item>
-        “Meta framework” for Vue.js
-      </c-list-item>
+    <ul>
+      <li>“Meta framework” for Vue.js</li>
+      <li>Abstraction for vue-server-renderer</li>
 
-      <c-list-item>
-        Abstraction for vue-server-renderer
-      </c-list-item>
-
-      <c-list-item>
+      <li>
         Built-in packages:
 
-        <c-list>
-          <c-list-item>
+        <ul>
+          <li>
             <a
               href="https://router.vuejs.org"
               target="_blank"
@@ -25,9 +20,9 @@
             >
               Vue Router
             </a>
-          </c-list-item>
+          </li>
 
-          <c-list-item>
+          <li>
             <a
               href="https://vuex.vuejs.org"
               target="_blank"
@@ -35,9 +30,9 @@
             >
               Vuex
             </a>
-          </c-list-item>
+          </li>
 
-          <c-list-item>
+          <li>
             <a
               href="https://github.com/declandewet/vue-meta"
               target="_blank"
@@ -45,22 +40,17 @@
             >
               vue-meta
             </a>
-          </c-list-item>
-        </c-list>
-      </c-list-item>
+          </li>
+        </ul>
+      </li>
 
-      <c-list-item>
-        Bonus feature: Static Site Generator
-      </c-list-item>
-    </c-list>
+      <li>Bonus feature: Static Site Generator</li>
+    </ul>
   </c-main>
 </template>
 
 <script>
-import CList from '@/components/c-list'
-import CListItem from '@/components/c-list-item'
 import CMain from '@/components/c-main'
-import CTitle from '@/components/c-title'
 
 import EventBus from '@/event-bus'
 
@@ -72,10 +62,7 @@ export default {
   },
 
   components: {
-    CList,
-    CListItem,
-    CMain,
-    CTitle
+    CMain
   },
 
   data () {

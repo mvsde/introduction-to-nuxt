@@ -1,33 +1,30 @@
 <template>
   <c-main>
-    <c-title slot="header">
+    <h1 slot="header">
       {{ title }}
-    </c-title>
+    </h1>
 
     <div>
       <p>This slide could not be found. Maybe start at the beginning?</p>
 
-      <c-list>
-        <c-list-item>
+      <ul>
+        <li>
           <nuxt-link to="/">
             Introduction to Nuxt.js
           </nuxt-link>
-        </c-list-item>
-        <c-list-item>
+        </li>
+        <li>
           <nuxt-link to="/toc">
             Table of Contents
           </nuxt-link>
-        </c-list-item>
-      </c-list>
+        </li>
+      </ul>
     </div>
   </c-main>
 </template>
 
 <script>
-import CList from '@/components/c-list'
-import CListItem from '@/components/c-list-item'
 import CMain from '@/components/c-main'
-import CTitle from '@/components/c-title'
 
 export default {
   head () {
@@ -37,10 +34,7 @@ export default {
   },
 
   components: {
-    CList,
-    CListItem,
-    CMain,
-    CTitle
+    CMain
   },
 
   data () {
