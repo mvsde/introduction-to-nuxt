@@ -1,16 +1,20 @@
 <template>
-  <main class="main">
+  <c-main
+    center
+    class="main"
+    next="/server-side-rendering"
+  >
     <h1 class="title">
       {{ title }}
     </h1>
     <p class="subtitle">
       Server side rendering made easy
     </p>
-  </main>
+  </c-main>
 </template>
 
 <script>
-import EventBus from '@/event-bus'
+import CMain from '@/components/c-main'
 
 export default {
   head () {
@@ -20,32 +24,21 @@ export default {
     }
   },
 
+  components: {
+    CMain
+  },
+
   data () {
     return {
       title: 'Introduction to Nuxt.js'
     }
-  },
-
-  created () {
-    EventBus.$on('nextSlide', () => this.$router.push('/server-side-rendering'))
-  },
-
-  destroyed () {
-    EventBus.$off('nextSlide')
   }
 }
 </script>
 
 <style scoped>
 .main {
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-
-  text-align: center;
   color: #fff;
-
   background: rgb(var(--color-light));
 }
 

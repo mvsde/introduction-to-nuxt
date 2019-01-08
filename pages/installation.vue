@@ -1,5 +1,8 @@
 <template>
-  <c-main>
+  <c-main
+    previous="/what-is-nuxt/schema"
+    next="/file-tree-routing"
+  >
     <h1 slot="header">
       {{ title }}
     </h1>
@@ -14,8 +17,6 @@
 <script>
 import CCode from '@/components/c-code'
 import CMain from '@/components/c-main'
-
-import EventBus from '@/event-bus'
 
 const installationCode = `# With npx
 npx create-nuxt-app project-name
@@ -45,16 +46,6 @@ export default {
     installationCode () {
       return installationCode
     }
-  },
-
-  created () {
-    EventBus.$on('previousSlide', () => this.$router.push('/what-is-nuxt/schema'))
-    EventBus.$on('nextSlide', () => this.$router.push('/folder-structure'))
-  },
-
-  destroyed () {
-    EventBus.$off('previousSlide')
-    EventBus.$off('nextSlide')
   }
 }
 </script>

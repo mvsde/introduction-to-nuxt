@@ -1,5 +1,8 @@
 <template>
-  <c-main>
+  <c-main
+    previous="/"
+    next="/toc"
+  >
     <h1 slot="header">
       {{ title }}
     </h1>
@@ -21,8 +24,6 @@
 <script>
 import CMain from '@/components/c-main'
 
-import EventBus from '@/event-bus'
-
 export default {
   head () {
     return {
@@ -38,16 +39,6 @@ export default {
     return {
       title: 'Server Side Rendering'
     }
-  },
-
-  created () {
-    EventBus.$on('previousSlide', () => this.$router.push('/'))
-    EventBus.$on('nextSlide', () => this.$router.push('/toc'))
-  },
-
-  destroyed () {
-    EventBus.$off('previousSlide')
-    EventBus.$off('nextSlide')
   }
 }
 </script>

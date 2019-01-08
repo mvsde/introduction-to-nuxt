@@ -1,5 +1,8 @@
 <template>
-  <c-main>
+  <c-main
+    previous="/file-tree-routing"
+    next="/vuex-store"
+  >
     <h1 slot="header">
       {{ title }}
     </h1>
@@ -8,8 +11,6 @@
 
 <script>
 import CMain from '@/components/c-main'
-
-import EventBus from '@/event-bus'
 
 export default {
   head () {
@@ -26,16 +27,6 @@ export default {
     return {
       title: 'Asynchronous Data'
     }
-  },
-
-  created () {
-    EventBus.$on('previousSlide', () => this.$router.push('/folder-structure'))
-    EventBus.$on('nextSlide', () => this.$router.push('/vuex-store'))
-  },
-
-  destroyed () {
-    EventBus.$off('previousSlide')
-    EventBus.$off('nextSlide')
   }
 }
 </script>

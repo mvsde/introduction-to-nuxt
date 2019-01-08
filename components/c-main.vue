@@ -1,5 +1,15 @@
 <template>
-  <main class="main">
+  <main
+    class="main"
+    :class="{ 'autohide': autohideEnabled }"
+  >
+    <global-events
+      @keyup.left="previousSlide"
+      @keyup.right="nextSlide"
+      @mousemove="autohide"
+      @mousedown="autohide"
+    />
+
     <div
       v-if="$slots.header"
       class="header"
@@ -7,11 +17,88 @@
       <slot name="header" />
     </div>
 
-    <div class="content">
+    <div
+      class="content"
+      :class="{ 'content--center': center }"
+    >
       <slot />
     </div>
+
+    <transition name="fade">
+      <c-nav
+        v-show="!autohideEnabled"
+        :previous="previous"
+        :next="next"
+      />
+    </transition>
   </main>
 </template>
+
+<script>
+import CNav from '@/components/c-nav'
+import GlobalEvents from 'vue-global-events'
+
+export default {
+  components: {
+    CNav,
+    GlobalEvents
+  },
+
+  props: {
+    center: {
+      type: Boolean,
+      default: false
+    },
+    previous: {
+      type: String,
+      default: undefined
+    },
+    next: {
+      type: String,
+      default: undefined
+    }
+  },
+
+  data () {
+    return {
+      autohideEnabled: true,
+      autohideTimer: null
+    }
+  },
+
+  created () {
+    this.autohide()
+  },
+
+  methods: {
+    autohide () {
+      if (this.autohideTimer) {
+        clearTimeout(this.autohideTimer)
+      }
+
+      this.autohideEnabled = false
+      this.autohideTimer = setTimeout(() => {
+        this.autohideEnabled = true
+        this.autohideTimer = null
+      }, 2000)
+    },
+    previousSlide () {
+      if (!this.previous) {
+        return
+      }
+
+      this.$router.push(this.previous)
+    },
+    nextSlide () {
+      if (!this.next) {
+        return
+      }
+
+      this.$router.push(this.next)
+    }
+  }
+}
+</script>
 
 <style scoped>
 .main {
@@ -23,6 +110,10 @@
   border: var(--frame-width) solid rgb(var(--color-light));
 }
 
+.autohide {
+  cursor: none;
+}
+
 .header {
   margin-bottom: 8vmin;
   padding-bottom: 4vmin;
@@ -32,6 +123,13 @@
 
 .content {
   flex-grow: 1;
+}
+
+.content--center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .content > :first-child {

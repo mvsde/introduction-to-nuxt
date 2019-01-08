@@ -1,7 +1,7 @@
 <template>
   <c-main
-    previous="/asynchronous-data"
-    next="/deployment"
+    previous="/installation"
+    next="/asynchronous-data"
   >
     <h1 slot="header">
       {{ title }}
@@ -25,7 +25,7 @@ export default {
 
   data () {
     return {
-      title: 'Vuex Store'
+      title: 'File Tree-based Routing'
     }
   }
 }

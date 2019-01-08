@@ -1,5 +1,8 @@
 <template>
-  <c-main>
+  <c-main
+    previous="/server-side-rendering"
+    next="/what-is-nuxt"
+  >
     <h1 slot="header">
       {{ title }}
     </h1>
@@ -19,8 +22,6 @@
 
 <script>
 import CMain from '@/components/c-main'
-
-import EventBus from '@/event-bus'
 
 export default {
   head () {
@@ -46,8 +47,8 @@ export default {
           title: 'Installation'
         },
         {
-          link: '/folder-structure',
-          title: 'Folder structure'
+          link: '/file-tree-routing',
+          title: 'File Tree-based Routing'
         },
         {
           link: '/asynchronous-data',
@@ -67,16 +68,6 @@ export default {
         }
       ]
     }
-  },
-
-  created () {
-    EventBus.$on('previousSlide', () => this.$router.push('/server-side-rendering'))
-    EventBus.$on('nextSlide', () => this.$router.push('/what-is-nuxt'))
-  },
-
-  destroyed () {
-    EventBus.$off('previousSlide')
-    EventBus.$off('nextSlide')
   }
 }
 </script>

@@ -1,12 +1,13 @@
 <template>
   <nav class="nav">
-    <button
+    <nuxt-link
+      v-if="previous"
       aria-label="Previous slide"
       class="button previous"
-      @click="previousSlide"
+      :to="previous"
     >
-      ◄
-    </button>
+      ←
+    </nuxt-link>
 
     <nuxt-link
       to="/toc"
@@ -16,26 +17,27 @@
       ☰
     </nuxt-link>
 
-    <button
+    <nuxt-link
+      v-if="next"
       aria-label="Next slide"
       class="button next"
-      @click="nextSlide"
+      :to="next"
     >
-      ►
-    </button>
+      →
+    </nuxt-link>
   </nav>
 </template>
 
 <script>
-import EventBus from '@/event-bus'
-
 export default {
-  methods: {
-    previousSlide () {
-      EventBus.$emit('previousSlide')
+  props: {
+    previous: {
+      type: String,
+      default: undefined
     },
-    nextSlide () {
-      EventBus.$emit('nextSlide')
+    next: {
+      type: String,
+      default: undefined
     }
   }
 }
@@ -62,7 +64,6 @@ export default {
   color: #fff;
 
   background: rgb(var(--color-dark));
-  border: 0;
   border-radius: 0.1em;
 
   opacity: 0.7;

@@ -31,10 +31,6 @@ module.exports = {
     '@/assets/css/transitions.css'
   ],
 
-  plugins: [
-    '@/plugins/global'
-  ],
-
   build: {
     babel: {
       presets: [

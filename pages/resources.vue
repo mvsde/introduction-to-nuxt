@@ -1,5 +1,7 @@
 <template>
-  <c-main>
+  <c-main
+    previous="/deployment"
+  >
     <h1 slot="header">
       {{ title }}
     </h1>
@@ -8,8 +10,6 @@
 
 <script>
 import CMain from '@/components/c-main'
-
-import EventBus from '@/event-bus'
 
 export default {
   head () {
@@ -26,14 +26,6 @@ export default {
     return {
       title: 'Resources'
     }
-  },
-
-  created () {
-    EventBus.$on('previousSlide', () => this.$router.push('/deployment'))
-  },
-
-  destroyed () {
-    EventBus.$off('previousSlide')
   }
 }
 </script>

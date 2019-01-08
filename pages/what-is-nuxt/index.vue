@@ -1,5 +1,8 @@
 <template>
-  <c-main>
+  <c-main
+    previous="/toc"
+    next="/what-is-nuxt/schema"
+  >
     <h1 slot="header">
       {{ title }}
     </h1>
@@ -52,8 +55,6 @@
 <script>
 import CMain from '@/components/c-main'
 
-import EventBus from '@/event-bus'
-
 export default {
   head () {
     return {
@@ -69,16 +70,6 @@ export default {
     return {
       title: 'What is Nuxt.js?'
     }
-  },
-
-  created () {
-    EventBus.$on('previousSlide', () => this.$router.push('/toc'))
-    EventBus.$on('nextSlide', () => this.$router.push('/what-is-nuxt/schema'))
-  },
-
-  destroyed () {
-    EventBus.$off('previousSlide')
-    EventBus.$off('nextSlide')
   }
 }
 </script>
