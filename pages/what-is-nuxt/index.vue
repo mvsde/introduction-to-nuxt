@@ -1,8 +1,5 @@
 <template>
-  <c-main
-    previous="/toc"
-    next="/what-is-nuxt/schema"
-  >
+  <c-main>
     <h1 slot="header">
       {{ title }}
     </h1>

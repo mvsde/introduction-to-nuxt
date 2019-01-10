@@ -1,8 +1,5 @@
 <template>
-  <c-main
-    previous="/server-side-rendering"
-    next="/what-is-nuxt"
-  >
+  <c-main>
     <h1 slot="header">
       {{ title }}
     </h1>

@@ -1,8 +1,5 @@
 <template>
-  <c-main
-    previous="/vuex-store"
-    next="/resources"
-  >
+  <c-main>
     <h1 slot="header">
       {{ title }}
     </h1>

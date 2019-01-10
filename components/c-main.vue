@@ -38,6 +38,8 @@
 import CNav from '@/components/c-nav'
 import GlobalEvents from 'vue-global-events'
 
+import config from '@/config'
+
 export default {
   components: {
     CNav,
@@ -48,14 +50,6 @@ export default {
     center: {
       type: Boolean,
       default: false
-    },
-    previous: {
-      type: String,
-      default: undefined
-    },
-    next: {
-      type: String,
-      default: undefined
     }
   },
 
@@ -63,6 +57,26 @@ export default {
     return {
       autohideEnabled: true,
       autohideTimer: null
+    }
+  },
+
+  computed: {
+    routeIndex () {
+      return config.sequence.indexOf(this.$route.path)
+    },
+    previous () {
+      if (this.routeIndex === 0) {
+        return
+      }
+
+      return config.sequence[this.routeIndex - 1]
+    },
+    next () {
+      if (this.routeIndex === config.sequence.length - 1) {
+        return
+      }
+
+      return config.sequence[this.routeIndex + 1]
     }
   },
 

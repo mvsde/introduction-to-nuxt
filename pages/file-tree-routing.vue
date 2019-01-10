@@ -1,8 +1,5 @@
 <template>
-  <c-main
-    previous="/installation"
-    next="/asynchronous-data"
-  >
+  <c-main>
     <h1 slot="header">
       {{ title }}
     </h1>

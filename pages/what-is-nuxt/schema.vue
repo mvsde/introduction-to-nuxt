@@ -1,8 +1,5 @@
 <template>
-  <c-main
-    previous="/what-is-nuxt"
-    next="/installation"
-  >
+  <c-main>
     <h1 slot="header">
       {{ title }}
     </h1>

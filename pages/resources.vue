@@ -1,7 +1,5 @@
 <template>
-  <c-main
-    previous="/deployment"
-  >
+  <c-main>
     <h1 slot="header">
       {{ title }}
     </h1>

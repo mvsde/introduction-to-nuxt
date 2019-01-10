@@ -1,8 +1,5 @@
 <template>
-  <c-main
-    previous="/"
-    next="/toc"
-  >
+  <c-main>
     <h1 slot="header">
       {{ title }}
     </h1>

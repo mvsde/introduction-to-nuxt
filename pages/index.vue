@@ -1,9 +1,5 @@
 <template>
-  <c-main
-    center
-    class="main"
-    next="/server-side-rendering"
-  >
+  <c-main center>
     <h1 class="title">
       {{ title }}
     </h1>
