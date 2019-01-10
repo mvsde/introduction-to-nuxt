@@ -39,3 +39,8 @@ button:focus {
   outline: 0.1em solid rgba(var(--color-dark), 0.5);
   outline-offset: 0.1em;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}

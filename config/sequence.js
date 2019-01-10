@@ -1,5 +1,6 @@
 export default [
   '/',
+  '/fynn-becker',
   '/server-side-rendering',
   '/toc',
   '/what-is-nuxt',
