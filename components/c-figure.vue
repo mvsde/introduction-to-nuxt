@@ -1,9 +1,11 @@
 <template>
   <figure class="figure">
     <img
-      class="image"
       :alt="alt"
+      class="image"
+      :height="height"
       :src="src"
+      :width="width"
     >
 
     <figcaption
@@ -25,6 +27,14 @@ export default {
     alt: {
       type: String,
       required: true
+    },
+    width: {
+      type: Number,
+      default: undefined
+    },
+    height: {
+      type: Number,
+      default: undefined
     }
   }
 }
@@ -32,22 +42,18 @@ export default {
 
 <style scoped>
 .figure {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  text-align: center;
   margin: 0 0 var(--vertical-space);
 }
 
 .image {
-  flex-grow: 1;
-  object-fit: contain;
+  vertical-align: middle;
   margin-bottom: calc(var(--vertical-space) / 2);
 }
 
 .caption {
   font-size: 0.7em;
   font-style: italic;
-  text-align: center;
   color: rgb(var(--color-dark));
 }
 </style>

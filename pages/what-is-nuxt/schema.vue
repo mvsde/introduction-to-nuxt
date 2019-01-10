@@ -5,13 +5,15 @@
     </h1>
 
     <c-figure
-      :src="require('@/assets/img/schema.png')"
       alt="Schema of the Nuxt.js request and navigation flow."
+      :height="661"
+      :src="require('@/assets/img/schema.svg')"
+      :width="450"
     >
       Source: <a
         href="https://nuxtjs.org/guide#schema"
-        target="_blank"
         rel="noopener"
+        target="_blank"
       >
         Nuxtjs.org
       </a>
