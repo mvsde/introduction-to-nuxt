@@ -29,5 +29,13 @@ export default {
 <style scoped>
 .code {
   margin: 0 0 var(--vertical-space);
+  padding: 0.4em 0.6em;
+
+  background: rgb(var(--color-code-bg));
+  border-radius: 0.1em;
+}
+
+.code >>> .token.operator {
+  background: none;
 }
 </style>

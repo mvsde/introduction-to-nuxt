@@ -11,7 +11,7 @@ h1 {
 h2 {
   margin: 1em 0 0.5em;
 
-  font-size: 7vmin;
+  font-size: 6.5vmin;
 }
 
 ul, ol {
@@ -19,7 +19,7 @@ ul, ol {
   padding-left: 1em;
 }
 
-li{
-  margin-bottom: 0.25em;
+li {
+  margin-bottom: 0.5em;
   padding-left: 0.5em;
 }

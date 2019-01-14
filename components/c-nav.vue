@@ -46,7 +46,7 @@ export default {
 <style scoped>
 .nav {
   display: flex;
-  position: absolute;
+  position: fixed;
   left: calc(var(--frame-width) * 2);
   bottom: calc(var(--frame-width) * 2);
 }

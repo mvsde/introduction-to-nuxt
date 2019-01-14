@@ -5,7 +5,7 @@
     </h1>
 
     <c-code
-      :code="installationCode"
+      :code="codeInstallation"
       language="bash"
     />
   </c-main>
@@ -15,7 +15,7 @@
 import CCode from '@/components/c-code'
 import CMain from '@/components/c-main'
 
-const installationCode = `# With npx
+const codeInstallation = `# With npx
 npx create-nuxt-app project-name
 
 # With Yarn
@@ -40,8 +40,8 @@ export default {
   },
 
   computed: {
-    installationCode () {
-      return installationCode
+    codeInstallation () {
+      return codeInstallation
     }
   }
 }
