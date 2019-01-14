@@ -44,7 +44,7 @@
         </ul>
       </li>
 
-      <li>Bonus feature: Static Site Generator</li>
+      <li>Static Site Generator</li>
     </ul>
   </c-main>
 </template>
