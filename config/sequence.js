@@ -1,8 +1,8 @@
 export default [
   '/',
   '/fynn-becker',
-  '/server-side-rendering',
   '/toc',
+  '/server-side-rendering',
   '/what-is-nuxt',
   '/what-is-nuxt/schema',
   '/installation',

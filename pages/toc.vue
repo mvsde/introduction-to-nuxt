@@ -36,6 +36,10 @@ export default {
       title: 'Table of Contents',
       entries: [
         {
+          link: '/server-side-rendering',
+          title: 'Server Side Rendering'
+        },
+        {
           link: '/what-is-nuxt',
           title: 'What is Nuxt.js?'
         },
