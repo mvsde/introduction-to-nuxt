@@ -14,8 +14,8 @@
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/toc">
-            Table of Contents
+          <nuxt-link to="/agenda">
+            Agenda
           </nuxt-link>
         </li>
       </ul>

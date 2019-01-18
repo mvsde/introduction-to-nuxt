@@ -33,7 +33,7 @@ export default {
 
   data () {
     return {
-      title: 'Table of Contents',
+      title: 'Agenda',
       entries: [
         {
           link: '/server-side-rendering',

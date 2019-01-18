@@ -3,16 +3,16 @@
     <nuxt-link
       v-if="previous"
       aria-label="Previous slide"
-      class="button previous"
+      class="button"
       :to="previous"
     >
       ←
     </nuxt-link>
 
     <nuxt-link
-      to="/toc"
-      class="button toc"
-      aria-label="Table of contents"
+      to="/agenda"
+      class="button"
+      aria-label="Agenda"
     >
       ☰
     </nuxt-link>
@@ -20,7 +20,7 @@
     <nuxt-link
       v-if="next"
       aria-label="Next slide"
-      class="button next"
+      class="button"
       :to="next"
     >
       →

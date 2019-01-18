@@ -1,7 +1,7 @@
 export default [
   '/',
   '/fynn-becker',
-  '/toc',
+  '/agenda',
   '/server-side-rendering',
   '/what-is-nuxt',
   '/what-is-nuxt/schema',
