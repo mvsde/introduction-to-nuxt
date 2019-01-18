@@ -6,6 +6,11 @@
 <script>
 import Prism from 'prismjs'
 
+Prism.languages.folders = {
+  punctuation: /^([-|+`'\s]+)/gm,
+  string: /([a-zA-Z0-9._].+)/g
+}
+
 export default {
   props: {
     code: {
@@ -14,12 +19,16 @@ export default {
     },
     language: {
       type: String,
-      default: 'javascript'
+      default: undefined
     }
   },
 
   computed: {
     html () {
+      if (!this.language) {
+        return this.code
+      }
+
       return Prism.highlight(this.code, Prism.languages[this.language], this.language)
     }
   }

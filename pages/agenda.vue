@@ -48,7 +48,7 @@ export default {
           title: 'Installation'
         },
         {
-          link: '/file-tree-routing',
+          link: '/file-tree-based-routing',
           title: 'File Tree-based Routing'
         },
         {
