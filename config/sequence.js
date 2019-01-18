@@ -13,6 +13,7 @@ export default [
   '/file-tree-based-routing/router-4',
   '/file-tree-based-routing/router-5',
   '/asynchronous-data',
+  '/asynchronous-data/error-handling',
   '/vuex-store',
   '/deployment',
   '/resources'

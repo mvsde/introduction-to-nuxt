@@ -1,0 +1,53 @@
+<template>
+  <c-main>
+    <h1 slot="header">
+      {{ title }}
+    </h1>
+
+    <c-code
+      :code="codeScript"
+      language="javascript"
+    />
+  </c-main>
+</template>
+
+<script>
+import CCode from '@/components/c-code'
+import CMain from '@/components/c-main'
+
+const codeScript = `export default {
+  async asyncData ({ params, error }) {
+    try {
+      const data = await get(\`/api/\${params.slug}\`)
+      return { title: data.title }
+    } catch (e) {
+      error({ statusCode: 404, message: 'Not found' })
+    }
+  }
+}`
+
+export default {
+  head () {
+    return {
+      title: this.title
+    }
+  },
+
+  components: {
+    CCode,
+    CMain
+  },
+
+  data () {
+    return {
+      title: 'Error Handling for Async Data'
+    }
+  },
+
+  computed: {
+    codeScript () {
+      return codeScript
+    }
+  }
+}
+</script>

@@ -38,7 +38,7 @@ module.exports = {
       ],
       plugins: [
         ['prismjs', {
-          languages: ['bash', 'javascript'],
+          languages: ['bash', 'javascript', 'twig'],
           theme: 'coy',
           css: true
         }]
