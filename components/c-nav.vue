@@ -6,7 +6,11 @@
       class="button"
       :to="previous"
     >
-      ←
+      <img
+        alt=""
+        class="icon"
+        src="@/assets/icons/left.svg"
+      >
     </nuxt-link>
 
     <nuxt-link
@@ -14,7 +18,11 @@
       class="button"
       aria-label="Agenda"
     >
-      ☰
+      <img
+        alt=""
+        class="icon"
+        src="@/assets/icons/agenda.svg"
+      >
     </nuxt-link>
 
     <nuxt-link
@@ -23,7 +31,11 @@
       class="button"
       :to="next"
     >
-      →
+      <img
+        alt=""
+        class="icon"
+        src="@/assets/icons/right.svg"
+      >
     </nuxt-link>
   </nav>
 </template>
@@ -52,21 +64,19 @@ export default {
 }
 
 .button {
-  font-size: 0.7em;
-
-  width: 1.3em;
   margin-right: 0.2em;
   padding: 0.15em;
 
-  line-height: 1;
-  text-align: center;
+  font-size: 0.5em;
+  line-height: 0;
   text-decoration: none;
   color: #fff;
 
   background: rgb(var(--color-dark));
+  border: 0;
   border-radius: 0.1em;
 
-  opacity: 0.7;
+  opacity: 0.6;
 
   transition: opacity 0.3s;
 }
@@ -74,5 +84,11 @@ export default {
 .button:hover,
 .button:focus {
   opacity: 1;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
 }
 </style>
