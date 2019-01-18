@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'autohide': autohideEnabled }">
+  <div>
     <global-events
       @keyup.left="previousSlide"
       @keyup.right="nextSlide"
@@ -64,14 +64,25 @@ export default {
 
   methods: {
     autohide () {
+      if (!process.client) {
+        return
+      }
+
       if (this.autohideTimer) {
         clearTimeout(this.autohideTimer)
       }
 
       this.autohideEnabled = false
+
+      document.documentElement.style.cursor = ''
+      document.body.style.pointerEvents = ''
+
       this.autohideTimer = setTimeout(() => {
         this.autohideEnabled = true
         this.autohideTimer = null
+
+        document.documentElement.style.cursor = 'none'
+        document.body.style.pointerEvents = 'none'
       }, 2000)
     },
     previousSlide () {
@@ -91,9 +102,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.autohide {
-  cursor: none;
-}
-</style>
