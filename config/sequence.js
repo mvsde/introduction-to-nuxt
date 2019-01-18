@@ -5,6 +5,7 @@ export default [
   '/server-side-rendering',
   '/what-is-nuxt',
   '/what-is-nuxt/schema',
+  '/what-is-nuxt/view-layers',
   '/installation',
   '/file-tree-based-routing',
   '/file-tree-based-routing/router-1',

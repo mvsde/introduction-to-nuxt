@@ -1,5 +1,8 @@
 <template>
-  <figure class="figure">
+  <figure
+    class="figure"
+    :class="{ 'stacked': stacked }"
+  >
     <img
       :alt="alt"
       class="image"
@@ -35,6 +38,10 @@ export default {
     height: {
       type: Number,
       default: undefined
+    },
+    stacked: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -42,18 +49,33 @@ export default {
 
 <style scoped>
 .figure {
-  text-align: center;
+  display: grid;
+  grid-template: max-content 1fr;
+  grid-template-areas:
+    "image"
+    "caption";
+  justify-items: center;
+  gap: var(--vertical-space);
   margin: 0 0 var(--vertical-space);
 }
 
+.stacked {
+  grid-template: 1fr / 1fr max-content 1fr;
+  grid-template-areas: ". image caption";
+  justify-items: start;
+  align-items: end;
+
+  text-align: left;
+}
+
 .image {
-  vertical-align: middle;
-  margin-bottom: calc(var(--vertical-space) / 2);
+  grid-area: image;
 }
 
 .caption {
-  font-size: 0.7em;
-  font-style: italic;
+  grid-area: caption;
+
+  font-size: 0.6em;
   color: rgb(var(--color-dark));
 }
 </style>

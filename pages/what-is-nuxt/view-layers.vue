@@ -5,14 +5,13 @@
     </h1>
 
     <c-figure
-      alt="Schema of the Nuxt.js request and navigation flow."
-      :height="823"
-      :src="require('@/assets/img/schema.svg')"
-      :width="560"
-      stacked
+      alt="Schema of the Nuxt.js view layer structure."
+      :height="730"
+      :src="require('@/assets/img/views.svg')"
+      :width="1460"
     >
       Source: <a
-        href="https://nuxtjs.org/guide#schema"
+        href="https://nuxtjs.org/guide/views"
         rel="noopener"
         target="_blank"
       >
@@ -40,7 +39,7 @@ export default {
 
   data () {
     return {
-      title: 'Schema'
+      title: 'View Layers'
     }
   }
 }
