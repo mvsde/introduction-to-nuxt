@@ -6,9 +6,9 @@
 
     <c-figure
       alt="Schema of the Nuxt.js request and navigation flow."
-      :height="661"
+      :height="750"
       :src="require('@/assets/img/schema.svg')"
-      :width="450"
+      :width="510"
     >
       Source: <a
         href="https://nuxtjs.org/guide#schema"

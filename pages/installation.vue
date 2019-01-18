@@ -4,8 +4,15 @@
       {{ title }}
     </h1>
 
+    <h2>npm</h2>
     <c-code
-      :code="codeInstallation"
+      :code="codeNpm"
+      language="bash"
+    />
+
+    <h2>Yarn</h2>
+    <c-code
+      :code="codeYarn"
       language="bash"
     />
   </c-main>
@@ -14,12 +21,6 @@
 <script>
 import CCode from '@/components/c-code'
 import CMain from '@/components/c-main'
-
-const codeInstallation = `# With npx
-npx create-nuxt-app project-name
-
-# With Yarn
-yarn create nuxt-app project-name`
 
 export default {
   head () {
@@ -40,8 +41,11 @@ export default {
   },
 
   computed: {
-    codeInstallation () {
-      return codeInstallation
+    codeNpm () {
+      return 'npx create-nuxt-app project-name'
+    },
+    codeYarn () {
+      return 'yarn create nuxt-app project-name'
     }
   }
 }

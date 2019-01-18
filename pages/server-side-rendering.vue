@@ -13,7 +13,7 @@
     <h2>SSR</h2>
     <ul>
       <li>Server responds with entry HTML file</li>
-      <li>JavaScript hydrates a SPA</li>
+      <li>JavaScript hydrates SPA</li>
     </ul>
   </c-main>
 </template>
