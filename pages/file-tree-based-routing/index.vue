@@ -4,6 +4,11 @@
       {{ title }}
     </h1>
 
+    <ul>
+      <li>Automatic Vue Router setup</li>
+      <li>Support for dynamic routes</li>
+    </ul>
+
     <c-code
       :code="codeFileTree"
       language="folders"
