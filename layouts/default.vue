@@ -1,8 +1,8 @@
 <template>
   <div>
     <global-events
-      @keyup.left="previousSlide"
-      @keyup.right="nextSlide"
+      @keydown.left="previousSlide"
+      @keydown.right="nextSlide"
       @mousemove="autohide"
       @mousedown="autohide"
     />
