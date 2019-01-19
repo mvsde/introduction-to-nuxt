@@ -5,7 +5,8 @@
     </h1>
 
     <p>
-      Front-end developer at <a
+      Front-end developer at
+      <a
         href="https://lfda.de"
         rel="noopener"
         target="_blank"

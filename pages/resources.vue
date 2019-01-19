@@ -44,11 +44,11 @@
       </li>
       <li>
         <a
-          href="https://github.com/nuxt-community/awesome-nuxt#projects-using-nuxtjs"
+          href="https://github.com/nuxt-community/awesome-nuxt"
           target="_blank"
           rel="noopener"
         >
-          github.com/nuxt-community/awesome-nuxt#projects-using-nuxtjs
+          github.com/nuxt-community/awesome-nuxt
         </a>
       </li>
     </ul>
