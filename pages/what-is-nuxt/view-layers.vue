@@ -1,7 +1,7 @@
 <template>
   <c-main>
     <h1 slot="header">
-      {{ title }}
+      {{ title }} <small>What is Nuxt.js?</small>
     </h1>
 
     <c-figure

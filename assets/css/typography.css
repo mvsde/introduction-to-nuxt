@@ -3,9 +3,17 @@ h1, h2 {
 }
 
 h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   margin: 0;
 
   font-size: 8vmin;
+}
+
+h1 small {
+  font-size: 0.6em;
+  opacity: 0.5;
 }
 
 h2 {
@@ -22,6 +30,10 @@ ul, ol {
 li {
   margin-bottom: 0.5em;
   padding-left: 0.5em;
+}
+
+abbr {
+  text-decoration: none;
 }
 
 .center {

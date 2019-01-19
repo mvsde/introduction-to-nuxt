@@ -1,7 +1,7 @@
 <template>
   <c-main>
     <h1 slot="header">
-      {{ title }}
+      {{ title }} <small>Asynchronous Data</small>
     </h1>
 
     <c-code
@@ -40,7 +40,7 @@ export default {
 
   data () {
     return {
-      title: 'Error Handling for Async Data'
+      title: 'Error Handling'
     }
   },
 
