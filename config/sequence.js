@@ -19,5 +19,7 @@ export default [
   '/vuex-store/modules',
   '/vuex-store/fetch-in-pages',
   '/deployment',
+  '/deployment/server-rendered',
+  '/deployment/static-generated',
   '/resources'
 ]
