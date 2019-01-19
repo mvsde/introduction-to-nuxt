@@ -16,6 +16,8 @@ export default [
   '/asynchronous-data',
   '/asynchronous-data/error-handling',
   '/vuex-store',
+  '/vuex-store/modules',
+  '/vuex-store/fetch-in-pages',
   '/deployment',
   '/resources'
 ]
