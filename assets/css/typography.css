@@ -1,3 +1,5 @@
+/* Headlines */
+
 h1, h2 {
   line-height: 1;
 }
@@ -22,6 +24,38 @@ h2 {
   font-size: 6vmin;
 }
 
+
+/* Running text */
+
+p {
+  margin: 0 0 var(--vertical-space);
+}
+
+
+/* Interactive */
+
+a {
+  color: rgb(var(--color-light));
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus,
+button:focus {
+  outline: 0.1em solid rgba(var(--color-dark), 0.5);
+  outline-offset: 0.1em;
+}
+
+
+/* Lists */
+
 ul, ol {
   margin: 0 0 var(--vertical-space);
   padding-left: 1em;
@@ -32,9 +66,39 @@ li {
   padding-left: 0.5em;
 }
 
+
+/* Code */
+
+pre, code {
+  font-family: 'Roboto Mono', monospace;
+
+  background: rgb(var(--color-code-bg));
+  border-radius: 0.1em;
+}
+
+pre {
+  margin: 0 0 var(--vertical-space);
+  padding: 0.4em 0.6em;
+}
+
+pre code {
+  padding: 0;
+  background: none;
+}
+
+code {
+  padding: 0 0.2em;
+}
+
+
+/* Misc */
+
 abbr {
   text-decoration: none;
 }
+
+
+/* Utilities */
 
 .center {
   text-align: center;

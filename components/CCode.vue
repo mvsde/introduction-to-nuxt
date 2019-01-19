@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable vue/no-v-html -->
-  <pre class="code"><code v-html="html" /></pre>
+  <pre><code v-html="html" /></pre>
 </template>
 
 <script>
@@ -35,16 +35,12 @@ export default {
 }
 </script>
 
-<style scoped>
-.code {
-  margin: 0 0 var(--vertical-space);
-  padding: 0.4em 0.6em;
-
-  background: rgb(var(--color-code-bg));
-  border-radius: 0.1em;
+<style>
+.token.comment {
+  font-style: italic;
 }
 
-.code >>> .token.operator {
+.token.operator {
   background: none;
 }
 </style>
