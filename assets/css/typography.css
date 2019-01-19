@@ -71,6 +71,7 @@ li {
 
 pre, code {
   font-family: 'Roboto Mono', monospace;
+  font-size: 0.9em;
 
   background: rgb(var(--color-code-bg));
   border-radius: 0.1em;
@@ -83,6 +84,7 @@ pre {
 
 pre code {
   padding: 0;
+  font-size: 1em;
   background: none;
 }
 
