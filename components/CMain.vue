@@ -9,7 +9,7 @@
 
     <div
       class="content"
-      :class="{ 'content--center': center }"
+      :class="{ 'is-centered': center }"
     >
       <slot />
     </div>
@@ -48,7 +48,7 @@ export default {
   flex-grow: 1;
 }
 
-.content--center {
+.content.is-centered {
   display: flex;
   flex-direction: column;
   justify-content: center;

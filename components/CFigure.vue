@@ -1,14 +1,12 @@
 <template>
   <figure
     class="figure"
-    :class="{ 'stacked': stacked }"
+    :class="{ 'is-side-by-side': sideBySide }"
   >
     <img
       :alt="alt"
       class="image"
-      :height="height"
       :src="src"
-      :width="width"
     >
 
     <figcaption
@@ -31,15 +29,7 @@ export default {
       type: String,
       required: true
     },
-    width: {
-      type: Number,
-      default: undefined
-    },
-    height: {
-      type: Number,
-      default: undefined
-    },
-    stacked: {
+    sideBySide: {
       type: Boolean,
       default: false
     }
@@ -59,17 +49,9 @@ export default {
   margin: 0 0 var(--vertical-space);
 }
 
-.stacked {
-  grid-template: 1fr / 1fr max-content 1fr;
-  grid-template-areas: ". image caption";
-  justify-items: start;
-  align-items: end;
-
-  text-align: left;
-}
-
 .image {
   grid-area: image;
+  height: 61vh;
 }
 
 .caption {
@@ -77,5 +59,18 @@ export default {
 
   font-size: 0.6em;
   color: rgb(var(--color-dark));
+}
+
+@media (min-width: 60rem) {
+  .figure.is-side-by-side {
+    grid-template: 1fr / 1fr max-content 1fr;
+    grid-template-areas: ". image caption";
+    justify-items: start;
+    align-items: end;
+  }
+
+  .is-side-by-side .image {
+    height: 69vh;
+  }
 }
 </style>

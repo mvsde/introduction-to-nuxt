@@ -6,9 +6,7 @@
 
     <c-figure
       alt="Schema of the Nuxt.js view layer structure."
-      :height="730"
       :src="require('@/assets/img/views.svg')"
-      :width="1460"
     >
       Source: <a
         href="https://nuxtjs.org/guide/views"
