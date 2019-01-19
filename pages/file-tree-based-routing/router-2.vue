@@ -10,7 +10,7 @@
     />
 
     <p class="center">
-      ↓
+      <c-icon icon="arrow-down" />
     </p>
 
     <c-code
@@ -22,6 +22,7 @@
 
 <script>
 import CCode from '@/components/CCode'
+import CIcon from '@/components/CIcon'
 import CMain from '@/components/CMain'
 
 const codeFileTree = `pages/about-us/
@@ -42,6 +43,7 @@ export default {
 
   components: {
     CCode,
+    CIcon,
     CMain
   },
 
