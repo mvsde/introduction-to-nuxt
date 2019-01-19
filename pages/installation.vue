@@ -22,6 +22,14 @@
 import CCode from '@/components/CCode'
 import CMain from '@/components/CMain'
 
+const codeNpm = `npx create-nuxt-app <project-name>
+cd <project-name>
+npm run dev`
+
+const codeYarn = `yarn create nuxt-app <project-name>
+cd <project-name>
+yarn run dev`
+
 export default {
   head () {
     return {
@@ -42,10 +50,10 @@ export default {
 
   computed: {
     codeNpm () {
-      return 'npx create-nuxt-app project-name'
+      return codeNpm
     },
     codeYarn () {
-      return 'yarn create nuxt-app project-name'
+      return codeYarn
     }
   }
 }

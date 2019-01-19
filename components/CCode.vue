@@ -11,6 +11,25 @@ Prism.languages.folders = {
   string: /([a-zA-Z0-9._].+)/g
 }
 
+Prism.languages.bash['function-extend'] = {
+  pattern: /(^|[\s;|&])(?:npx|yarn)(?=$|[\s;|&])/,
+  lookbehind: true,
+  alias: 'function'
+}
+
+Prism.languages.bash['keyword-extend'] = {
+  pattern: /(^|[\s;|&])(?:create|run)(?=$|[\s;|&])/,
+  lookbehind: true,
+  alias: 'keyword'
+}
+
+const supported = [
+  'bash',
+  'folders',
+  'javascript',
+  'twig'
+]
+
 export default {
   props: {
     code: {
@@ -25,7 +44,7 @@ export default {
 
   computed: {
     html () {
-      if (!this.language) {
+      if (!supported.includes(this.language)) {
         return this.code
       }
 
