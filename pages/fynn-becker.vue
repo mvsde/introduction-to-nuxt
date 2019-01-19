@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import CMain from '@/components/c-main'
+import CMain from '@/components/CMain'
 
 export default {
   head () {

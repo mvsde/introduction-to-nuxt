@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import CNav from '@/components/c-nav'
+import CNav from '@/components/CNav'
 import GlobalEvents from 'vue-global-events'
 
 import config from '@/config'

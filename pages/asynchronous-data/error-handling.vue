@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import CCode from '@/components/c-code'
-import CMain from '@/components/c-main'
+import CCode from '@/components/CCode'
+import CMain from '@/components/CMain'
 
 const codeScript = `export default {
   async asyncData ({ params, error }) {

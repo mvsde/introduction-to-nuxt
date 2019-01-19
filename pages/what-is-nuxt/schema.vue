@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import CFigure from '@/components/c-figure'
-import CMain from '@/components/c-main'
+import CFigure from '@/components/CFigure'
+import CMain from '@/components/CMain'
 
 export default {
   head () {
