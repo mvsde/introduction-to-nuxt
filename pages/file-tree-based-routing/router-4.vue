@@ -26,12 +26,12 @@ import CIcon from '@/components/CIcon'
 import CMain from '@/components/CMain'
 
 const codeFileTree = `pages/products/
-'-- index.vue`
+'-- _slug.vue`
 
 const codeRouterJs = `{
-  name: 'products',
-  path: '/products',
-  component: 'pages/products/index.vue'
+  name: 'products-slug',
+  path: '/products/:slug?',
+  component: 'pages/products/_slug.vue'
 }`
 
 export default {
