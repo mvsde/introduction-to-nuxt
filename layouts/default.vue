@@ -5,6 +5,8 @@
       @keyup.right="nextSlide"
       @keyup.33="previousSlide"
       @keyup.34="nextSlide"
+      @keyup.116.prevent="enterFullscreen"
+      @keyup.66="toggleBlank"
       @mousemove="autohide"
       @mousedown="autohide"
     />
@@ -36,7 +38,8 @@ export default {
   data () {
     return {
       autohideEnabled: true,
-      autohideTimer: null
+      autohideTimer: null,
+      isBlanked: false
     }
   },
 
@@ -100,6 +103,18 @@ export default {
       }
 
       this.$router.push(this.next)
+    },
+    enterFullscreen () {
+      document.documentElement.requestFullscreen()
+    },
+    toggleBlank () {
+      if (this.isBlanked) {
+        document.body.style.opacity = ''
+        this.isBlanked = false
+      } else {
+        document.body.style.opacity = '0'
+        this.isBlanked = true
+      }
     }
   }
 }
