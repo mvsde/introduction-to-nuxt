@@ -5,8 +5,9 @@
       @keyup.right="nextSlide"
       @keyup.33="previousSlide"
       @keyup.34="nextSlide"
-      @keyup.116.prevent="enterFullscreen"
+      @keyup.116="enterFullscreen"
       @keyup.66="toggleBlank"
+      @keydown.116.prevent
       @mousemove="autohide"
       @mousedown="autohide"
     />
