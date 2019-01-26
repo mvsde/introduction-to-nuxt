@@ -4,15 +4,21 @@
       {{ title }}
     </h1>
 
-    <p>
-      Front-end developer at
-      <a
-        href="https://lfda.de"
-        rel="noopener"
-        target="_blank"
+    <p class="occupation">
+      <img
+        alt="LfdA Logo"
+        src="@/assets/img/lfda.svg"
       >
-        LfdA – Labor für digitale Angelegenheiten
-      </a>
+      <span>
+        Front-end developer at
+        <a
+          href="https://lfda.de"
+          rel="noopener"
+          target="_blank"
+        >
+          lfda.de
+        </a>
+      </span>
     </p>
 
     <h2>Social Stuff</h2>
@@ -81,6 +87,17 @@ export default {
 </script>
 
 <style scoped>
+.occupation,
+.social__link {
+  display: inline-grid;
+  grid-template-columns: 7vmin 1fr;
+  gap: 2vmin;
+}
+
+.occupation {
+  margin: 0;
+}
+
 .social {
   list-style: none;
   padding: 0;
@@ -91,10 +108,6 @@ export default {
 }
 
 .social__link {
-  display: inline-grid;
-  grid-template-columns: 7vmin 1fr;
-  gap: 2vmin;
-
   color: inherit;
 }
 
