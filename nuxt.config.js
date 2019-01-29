@@ -3,8 +3,11 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
+  modern: 'server',
+
   generate: {
-    fallback: true
+    fallback: true,
+    subFolders: false
   },
 
   head: {
