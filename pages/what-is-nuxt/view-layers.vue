@@ -5,8 +5,8 @@
     </h1>
 
     <c-figure
-      alt="Schema of the Nuxt.js view layer structure."
       :src="require('@/assets/img/views.svg')"
+      alt="Schema of the Nuxt.js view layer structure."
     >
       Source: <a
         href="https://nuxtjs.org/guide/views"
@@ -24,12 +24,6 @@ import CFigure from '@/components/CFigure'
 import CMain from '@/components/CMain'
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CFigure,
     CMain
@@ -38,6 +32,12 @@ export default {
   data () {
     return {
       title: 'View Layers'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   }
 }

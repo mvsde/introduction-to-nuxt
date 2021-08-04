@@ -47,12 +47,6 @@
 import CMain from '@/components/CMain'
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CMain
   },
@@ -60,6 +54,12 @@ export default {
   data () {
     return {
       title: 'Static Generated'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   }
 }

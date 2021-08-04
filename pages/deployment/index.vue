@@ -31,12 +31,6 @@ yarn run start
 yarn run generate`
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CCode,
     CMain
@@ -45,6 +39,12 @@ export default {
   data () {
     return {
       title: 'Deployment'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   },
 

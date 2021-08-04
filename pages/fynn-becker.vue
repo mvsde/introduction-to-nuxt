@@ -5,20 +5,13 @@
     </h1>
 
     <p class="occupation">
-      <img
-        alt="LfdA Logo"
-        src="@/assets/img/lfda.svg"
+      Website and blog at
+      <a
+        href="https://fynn.be"
+        target="_blank"
       >
-      <span>
-        Front-end developer at
-        <a
-          href="https://lfda.de"
-          rel="noopener"
-          target="_blank"
-        >
-          lfda.de
-        </a>
-      </span>
+        fynn.be
+      </a>
     </p>
 
     <h2>Social Stuff</h2>
@@ -30,9 +23,8 @@
         class="social__item"
       >
         <a
-          class="social__link"
           :href="item.url"
-          rel="noopener"
+          class="social__link"
           target="_blank"
         >
           <img
@@ -50,12 +42,6 @@
 import CMain from '@/components/CMain'
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CMain
   },
@@ -66,7 +52,7 @@ export default {
       social: {
         twitter: {
           url: 'https://twitter.com/mvsde',
-          text: '@mvsde'
+          text: 'mvsde'
         },
         github: {
           url: 'https://github.com/mvsde',
@@ -78,16 +64,21 @@ export default {
         },
         linkedin: {
           url: 'https://www.linkedin.com/in/fynn',
-          text: 'in/fynn'
+          text: 'fynn'
         }
       }
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   }
 }
 </script>
 
 <style scoped>
-.occupation,
 .social__link {
   display: inline-grid;
   grid-template-columns: 7vmin 1fr;

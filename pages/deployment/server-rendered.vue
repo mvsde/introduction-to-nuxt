@@ -31,12 +31,6 @@
 import CMain from '@/components/CMain'
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CMain
   },
@@ -44,6 +38,12 @@ export default {
   data () {
     return {
       title: 'Server Rendered'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   }
 }

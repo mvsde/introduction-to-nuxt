@@ -27,12 +27,6 @@ export const mutations = {
 }`
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CCode,
     CMain
@@ -41,6 +35,12 @@ export default {
   data () {
     return {
       title: 'Modules'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   },
 

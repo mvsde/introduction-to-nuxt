@@ -21,12 +21,6 @@
 import CMain from '@/components/CMain'
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CMain
   },
@@ -68,6 +62,12 @@ export default {
           title: 'Resources'
         }
       ]
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   }
 }

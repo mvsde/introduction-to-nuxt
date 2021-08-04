@@ -1,12 +1,12 @@
 <template>
   <figure
-    class="figure"
     :class="{ 'is-side-by-side': sideBySide }"
+    class="figure"
   >
     <img
       :alt="alt"
-      class="image"
       :src="src"
+      class="image"
     >
 
     <figcaption

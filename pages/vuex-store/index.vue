@@ -28,12 +28,6 @@ const codeFileTree = `store/
 '-- …`
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CCode,
     CMain
@@ -42,6 +36,12 @@ export default {
   data () {
     return {
       title: 'Vuex Store'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   },
 

@@ -27,12 +27,6 @@
 import CMain from '@/components/CMain'
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CMain
   },
@@ -40,6 +34,12 @@ export default {
   data () {
     return {
       title: 'Slide Not Found'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   }
 }

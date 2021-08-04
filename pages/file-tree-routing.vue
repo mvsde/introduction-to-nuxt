@@ -34,12 +34,6 @@ const codeRouterConfig = `[{
 }]`
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CCode,
     CMain
@@ -48,6 +42,12 @@ export default {
   data () {
     return {
       title: 'File Tree-based Routing'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   },
 

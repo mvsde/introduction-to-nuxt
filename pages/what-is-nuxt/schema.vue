@@ -5,8 +5,8 @@
     </h1>
 
     <c-figure
-      alt="Schema of the Nuxt.js request and navigation flow."
       :src="require('@/assets/img/schema.svg')"
+      alt="Schema of the Nuxt.js request and navigation flow."
       side-by-side
     >
       Source: <a
@@ -25,12 +25,6 @@ import CFigure from '@/components/CFigure'
 import CMain from '@/components/CMain'
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CFigure,
     CMain
@@ -39,6 +33,12 @@ export default {
   data () {
     return {
       title: 'Schema'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   }
 }

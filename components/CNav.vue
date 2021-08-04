@@ -2,9 +2,9 @@
   <nav class="nav">
     <nuxt-link
       v-if="previous"
+      :to="previous"
       aria-label="Previous slide"
       class="button"
-      :to="previous"
     >
       <img
         alt=""
@@ -27,9 +27,9 @@
 
     <nuxt-link
       v-if="next"
+      :to="next"
       aria-label="Next slide"
       class="button"
-      :to="next"
     >
       <img
         alt=""

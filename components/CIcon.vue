@@ -1,8 +1,8 @@
 <template>
   <img
+    :src="require(`@/assets/icons/${icon}.svg`)"
     alt=""
     class="icon"
-    :src="require(`@/assets/icons/${icon}.svg`)"
     width="54"
     height="54"
   >

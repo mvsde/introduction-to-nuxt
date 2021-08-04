@@ -31,12 +31,6 @@ cd <project-name>
 yarn run dev`
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CCode,
     CMain
@@ -45,6 +39,12 @@ export default {
   data () {
     return {
       title: 'Installation'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   },
 

@@ -8,8 +8,8 @@
     </div>
 
     <div
-      class="content"
       :class="{ 'is-centered': center }"
+      class="content"
     >
       <slot />
     </div>

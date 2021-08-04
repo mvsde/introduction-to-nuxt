@@ -54,12 +54,6 @@
 import CMain from '@/components/CMain'
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CMain
   },
@@ -67,6 +61,12 @@ export default {
   data () {
     return {
       title: 'What is Nuxt.js?'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   }
 }

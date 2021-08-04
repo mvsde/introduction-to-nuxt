@@ -13,13 +13,6 @@
 import CMain from '@/components/CMain'
 
 export default {
-  head () {
-    return {
-      titleTemplate: '%s',
-      title: this.title
-    }
-  },
-
   components: {
     CMain
   },
@@ -27,6 +20,13 @@ export default {
   data () {
     return {
       title: 'Introduction to Nuxt.js'
+    }
+  },
+
+  head () {
+    return {
+      titleTemplate: '%s',
+      title: this.title
     }
   }
 }

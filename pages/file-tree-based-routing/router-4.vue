@@ -35,12 +35,6 @@ const codeRouterJs = `{
 }`
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CCode,
     CIcon,
@@ -50,6 +44,12 @@ export default {
   data () {
     return {
       title: 'router.js'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   },
 

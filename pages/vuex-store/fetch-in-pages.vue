@@ -28,12 +28,6 @@ const codeScript = `export default {
 }`
 
 export default {
-  head () {
-    return {
-      title: this.title
-    }
-  },
-
   components: {
     CCode,
     CMain
@@ -42,6 +36,12 @@ export default {
   data () {
     return {
       title: 'Fetch in Pages'
+    }
+  },
+
+  head () {
+    return {
+      title: this.title
     }
   },
 
