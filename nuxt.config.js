@@ -16,8 +16,7 @@ export default {
       { hid: 'description', name: 'description', content: 'A short introduction to Nuxt.js built with Nuxt.js 😃' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i|Source+Sans+Pro:400,700' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
@@ -26,6 +25,7 @@ export default {
   },
 
   css: [
+    '@/assets/css/fonts.css',
     '@/assets/css/variables.css',
     '@/assets/css/scaffolding.css',
     '@/assets/css/typography.css',
