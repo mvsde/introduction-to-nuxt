@@ -1,7 +1,5 @@
 # Introduction to Nuxt.js
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4ad978ba-2740-4bc8-a487-c1462db5757c/deploy-status)](https://app.netlify.com/sites/introduction-to-nuxt/deploys)
-
 > A short introduction to Nuxt.js built with Nuxt.js 😃
 
 ## Build Setup
