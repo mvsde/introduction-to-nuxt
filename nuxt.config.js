@@ -4,8 +4,7 @@ export default {
   modern: 'server',
 
   generate: {
-    fallback: true,
-    subFolders: false
+    fallback: true
   },
 
   head: {
